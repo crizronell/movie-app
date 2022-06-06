@@ -8,7 +8,7 @@ function Pages() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Home />}></Route>
+        <Route path="/movie-app" element={<Home />}></Route>
         <Route path="/details/:id" element={<MovieDetails />}></Route>
         <Route path="/searched/:name" element={<Searched />}></Route>
       </Routes>

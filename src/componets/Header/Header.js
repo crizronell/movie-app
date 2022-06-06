@@ -10,7 +10,7 @@ function Header() {
         role="navigation"
       >
         <div className="ml-[10rem]">
-          <Link to="/">
+          <Link to="/movie-app">
             <SiThemoviedatabase className="text-5xl" />
           </Link>
         </div>
