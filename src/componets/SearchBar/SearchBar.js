@@ -1,0 +1,33 @@
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
+function SearchBar() {
+  const [input, setInput] = useState("");
+  const navigate = useNavigate();
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    navigate("/searched/" + input);
+    setInput("");
+  };
+
+  const onChange = (e) => {
+    setInput(e.target.value);
+  };
+
+  return (
+    <div className="container mx-auto  flex justify-center mt-4">
+      <form onSubmit={onSubmit}>
+        <input
+          onChange={onChange}
+          value={input}
+          className=" focus:outline-none  border border-slate-300  w-full sm:w-[30rem] text-xl leading-6 placeholder:italic placeholder:text-slate-400 rounded-full py-2 pl-10  shadow-md"
+          type="text"
+          placeholder="Search Movie..."
+        />
+      </form>
+    </div>
+  );
+}
+
+export default SearchBar;
